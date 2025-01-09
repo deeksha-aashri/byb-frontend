@@ -45,7 +45,7 @@ const SignUp = () => {
     } catch (error) {
       if (error.response && error.response.data) {
         console.error('Error Response:', error.response.data);
-        setError(`Error: ${error.response.data.message || 'Sign up failed'}`);
+        setError(`Error: ${error.response.data.data || 'Sign up failed'}`);
       } else {
         console.error('Error:', error.message);
         setError('An unexpected error occurred. Please try again later.');
